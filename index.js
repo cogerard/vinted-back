@@ -11,13 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/vinted");
+mongoose.connect(process.env.MONGODB_URI);
 
 // Je me connecte à mon compte cloudinary avec les identifiants présents sur mon compte
 cloudinary.config({
-  cloud_name: "dr3jpgy41",
-  api_key: "765622985783434",
-  api_secret: "X8kv4QCLa0P-MscF11jYewqL-n4",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: CLOUDINARY_API_SECRET,
   secure: true,
 });
 
