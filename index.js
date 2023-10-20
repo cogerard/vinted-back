@@ -1,7 +1,5 @@
 require("dotenv").config(); // Permet d'activer les variables d'environnement qui se trouvent dans le fichier `.env`
 
-mongoose.connect(process.env.MONGODB_URI);
-
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
